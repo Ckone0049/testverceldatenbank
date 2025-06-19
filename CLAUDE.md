@@ -28,13 +28,12 @@
   4. Added postinstall hook for prisma generate
   5. Multiple deployment attempts - 5 consecutive failures
 
-### ❌ FALSE SUCCESS - 404/401 ERRORS!
-- ✅ Build completed and marked as "READY"
-- ❌ Main URL returns 404: "The page could not be found"
-- ❌ Deployment URLs return 401: Unauthorized
-- 🔍 Issue: vercel.json interferes with Next.js auto-detection
-- 🔧 New approach: Remove vercel.json, let Vercel auto-detect Next.js
-- ✅ package.json scripts already contain "prisma generate && next build"
+### 🔄 ITERATING ON DEPLOYMENT ISSUES
+- ❌ Previous: vercel.json with buildCommand caused 404/401 errors
+- ❌ Previous: No vercel.json caused "No Output Directory 'public' found"
+- 🔧 Current approach: Minimal vercel.json with only framework detection
+- ✅ Added: `{ "framework": "nextjs" }` to help Vercel detect Next.js
+- 🎯 Goal: Let Vercel handle build while using our package.json scripts
 
 ### Next Steps:
 - [ ] Push latest vercel.json fix
@@ -48,8 +47,9 @@
 🔄 **After every git push:**
 1. Run `vercel --prod --debug` to see detailed build logs
 2. Monitor for errors and fix immediately
-3. Update CLAUDE.md with findings
-4. Repeat until deployment succeeds
+3. ✅ **If deployment succeeds:** Test with `curl -I <main-url>` to verify app is reachable
+4. Update CLAUDE.md with findings
+5. Repeat until deployment succeeds AND app responds correctly
 
 ### Technical Notes:
 - Fixed TypeScript version from 4.5.5 to ^5.1.0 for Prisma compatibility
