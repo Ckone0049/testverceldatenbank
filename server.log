@@ -21,3 +21,75 @@ wait  - compiling...
 error - Module not found: Error: Can't resolve './node_modules/next/dist/client/dev/amp-dev' in '/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma'
 wait  - compiling...
 wait  - compiling /_error (client and server)...
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:41630:9)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25321:12
+    at eval (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:12:1)
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22742:17)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:35:47)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:47:22
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22740:10)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:9429
+caused by plugins in Compilation.hooks.processAssets
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:35:47)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:47:22
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22740:10)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:9429
+error - HookWebpackError: Cannot read properties of undefined (reading 'replace')
+HookWebpackError: Cannot read properties of undefined (reading 'replace')
+    at makeWebpackError (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:41630:9)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25321:12
+    at eval (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:12:1)
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22742:17)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+-- inner error --
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:35:47)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:47:22
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22740:10)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:9429
+caused by plugins in Compilation.hooks.processAssets
+TypeError: Cannot read properties of undefined (reading 'replace')
+    at PagesManifestPlugin.createAssets (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:35:47)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/build/webpack/plugins/pages-manifest-plugin.js:47:22
+    at fn (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:22740:10)
+    at Hook.eval [as callAsync] (eval at create (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:140036:10), <anonymous>:10:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:139838:14)
+    at cont (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25318:34)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/webpack/bundle5.js:25366:10
+    at symbolIterator (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14443)
+    at done (/home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:14823)
+    at /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/node_modules/next/dist/compiled/neo-async/async.js:1:9429
+error - HookWebpackError: Cannot read properties of undefined (reading 'replace')
