@@ -19,20 +19,38 @@
 - Vercel Deployment: ❌ Multiple failed deployments
 
 ### Deployment Issues:
-- Problem: npm install fails on Vercel due to dependency conflicts
+- Root cause identified: Prisma Client not generated during Vercel build
+- Log error: "PrismaClientInitializationError: Prisma has detected that this project was built on Vercel, which caches dependencies"
 - Attempted fixes:
   1. Updated TypeScript to ^5.1.0
-  2. Added .npmrc with legacy-peer-deps=true
-  3. Multiple deployment attempts - all failed
-- Next approach: Simplify dependencies or use different versions
+  2. Added .npmrc with legacy-peer-deps=true  
+  3. Added prisma generate to build script
+  4. Added postinstall hook for prisma generate
+  5. Multiple deployment attempts - 5 consecutive failures
+
+### Latest Discovery:
+- ✅ Build logs now visible with --debug flag
+- New error: "No Output Directory named 'public' found" 
+- Issue: vercel.json buildCommand interferes with Next.js detection
+- Fix: Added outputDirectory: ".next" to vercel.json
 
 ### Next Steps:
+- [ ] Push latest vercel.json fix
+- [ ] Run `vercel --prod --debug` to monitor deployment
 - [ ] Verify Vercel deployment success
 - [ ] Test production app functionality
 - [ ] Add authentication (NextAuth.js)
 - [ ] Implement additional features if needed
 
+### Workflow Protocol:
+🔄 **After every git push:**
+1. Run `vercel --prod --debug` to see detailed build logs
+2. Monitor for errors and fix immediately
+3. Update CLAUDE.md with findings
+4. Repeat until deployment succeeds
+
 ### Technical Notes:
 - Fixed TypeScript version from 4.5.5 to ^5.1.0 for Prisma compatibility
 - Used --legacy-peer-deps to resolve dependency conflicts
 - Moved app from subfolder to root directory for Vercel deployment
+- Added vercel.json with prisma generate and outputDirectory configuration
