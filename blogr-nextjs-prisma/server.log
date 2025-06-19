@@ -1,0 +1,19 @@
+
+> hello-next@1.0.0 dev
+> next
+
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+info  - Loaded env from /home/kirsc/test-install/testverceldatenbank/blogr-nextjs-prisma/.env
+event - compiled client and server successfully in 382 ms (120 modules)
+wait  - compiling / (client and server)...
+event - compiled client and server successfully in 1257 ms (333 modules)
+wait  - compiling /_error (client and server)...
+event - compiled client and server successfully in 96 ms (334 modules)
+wait  - compiling /create...
+event - compiled client and server successfully in 132 ms (336 modules)
+wait  - compiling /api/posts...
+event - compiled client and server successfully in 119 ms (347 modules)
+wait  - compiling /drafts...
+event - compiled client and server successfully in 132 ms (349 modules)
+wait  - compiling /drafts (client and server)...
+event - compiled client and server successfully in 84 ms (350 modules)
