@@ -1,9 +1,9 @@
-import NextAuth from 'next-auth'
+import NextAuth, { NextAuthOptions } from 'next-auth'
 import GitHubProvider from 'next-auth/providers/github'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import prisma from '../../../lib/prisma'
 
-export default NextAuth({
+export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GitHubProvider({
@@ -76,4 +76,6 @@ export default NextAuth({
     },
   },
   debug: process.env.NODE_ENV === 'development',
-})
+}
+
+export default NextAuth(authOptions)

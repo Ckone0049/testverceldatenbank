@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">92.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">92.3% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>12/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -98,22 +98,22 @@
 <a name='L33'></a><a href='#L33'>33</a>
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -132,23 +132,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-<span class="cstat-no" title="statement not covered" >import Router from "next/router";</span>
+import Router from "next/router";
 import ReactMarkdown from "react-markdown";
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export type PostProps = {</span>
-  id: string;<span class="cstat-no" title="statement not covered" ></span>
-  title: stri<span class="cstat-no" title="statement not covered" >ng;</span>
-  author: {<span class="cstat-no" title="statement not covered" ></span>
-    name: string;<span class="cstat-no" title="statement not covered" ></span>
-  } | nul<span class="fstat-no" title="function not covered" >l;</span>
-  co<span class="cstat-no" title="statement not covered" >ntent: string;</span>
+export type PostProps = {
+  id: string;
+  title: string;
+  author: {
+    name: string;
+  } | null;
+  content: string;
   published: boolean;
   createdAt?: string;
   updatedAt?: string;
-};<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-cons<span class="cstat-no" title="statement not covered" >t Post: React.FC&lt;{ post: PostProps }&gt; = ({ post }) =&gt; {</span>
-  const authorNam<span class="fstat-no" title="function not covered" >e </span>= <span class="cstat-no" title="statement not covered" >post.author ? post.author.name : "Unknown author"</span>;
+};
+&nbsp;
+const Post: React.FC&lt;{ post: PostProps }&gt; = ({ post }) =&gt; {
+  const authorNam<span class="fstat-no" title="function not covered" >e </span>= <span class="cstat-no" title="statement not covered" >post.author &amp;&amp; post.author.name ? post.author.nam</span>e : "Unknown author";
   return (
     &lt;div onClick={() =&gt; Router.push("/p/[id]", `/p/${post.id}`)}&gt;
       &lt;h2&gt;{post.title}&lt;/h2&gt;
@@ -172,7 +172,7 @@ export default Post;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-06-20T09:29:36.848Z
+                at 2025-06-20T10:41:26.563Z
             </div>
         <script src="../prettify.js"></script>
         <script>
