@@ -9,15 +9,18 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    session: async ({ session, token }) => {
+    async signIn({ user, account, profile }) {
+      return true
+    },
+    async session({ session, token }) {
       if (session?.user && token?.sub) {
         (session.user as any).id = token.sub
       }
       return session
     },
-    jwt: async ({ user, token }) => {
+    async jwt({ token, user, account }) {
       if (user) {
-        token.uid = user.id
+        token.sub = user.id
       }
       return token
     },
@@ -25,4 +28,5 @@ export default NextAuth({
   session: {
     strategy: 'jwt',
   },
+  debug: true,
 })
