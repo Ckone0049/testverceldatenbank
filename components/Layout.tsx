@@ -5,45 +5,31 @@ type Props = {
   children: ReactNode;
 };
 
-const Layout: React.FC<Props> = (props) => (
-  <div>
+const Layout: React.FC<Props> = ({ children }) => (
+  <div className="min-h-screen bg-gray-50">
     <Header />
-    <div className="layout">{props.children}</div>
-    <style jsx global>{`
-      html {
-        box-sizing: border-box;
-      }
-
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-          "Segoe UI Symbol";
-        background: rgba(0, 0, 0, 0.05);
-      }
-
-      input,
-      textarea {
-        font-size: 16px;
-      }
-
-      button {
-        cursor: pointer;
-      }
-    `}</style>
-    <style jsx>{`
-      .layout {
-        padding: 0 2rem;
-      }
-    `}</style>
+    <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {children}
+    </main>
+    
+    {/* Footer */}
+    <footer className="bg-white border-t border-gray-200 mt-auto">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="flex justify-between items-center">
+          <p className="text-sm text-gray-500">
+            © 2025 BlogApp. Built with Next.js and Tailwind CSS.
+          </p>
+          <div className="flex space-x-4">
+            <a href="#" className="text-sm text-gray-500 hover:text-gray-700">
+              Privacy
+            </a>
+            <a href="#" className="text-sm text-gray-500 hover:text-gray-700">
+              Terms
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 );
 
