@@ -75,5 +75,5 @@ export default NextAuth({
       console.log('LinkAccount event:', message);
     },
   },
-  debug: true,
+  debug: process.env.NODE_ENV === 'development',
 })
