@@ -14,5 +14,37 @@ export default NextAuth({
   session: {
     strategy: 'database',
   },
+  callbacks: {
+    async signIn({ user, account, profile, email, credentials }) {
+      console.log('SignIn callback:', { user, account, profile });
+      // Erlaube Account-Linking wenn Email übereinstimmt
+      return true;
+    },
+    async redirect({ url, baseUrl }) {
+      console.log('Redirect callback:', { url, baseUrl });
+      return baseUrl;
+    },
+    async session({ session, user }) {
+      console.log('Session callback:', { session, user });
+      return session;
+    },
+  },
+  events: {
+    async signIn(message) {
+      console.log('SignIn event:', message);
+    },
+    async signOut(message) {
+      console.log('SignOut event:', message);
+    },
+    async createUser(message) {
+      console.log('CreateUser event:', message);
+    },
+    async updateUser(message) {
+      console.log('UpdateUser event:', message);
+    },
+    async linkAccount(message) {
+      console.log('LinkAccount event:', message);
+    },
+  },
   debug: true,
 })
