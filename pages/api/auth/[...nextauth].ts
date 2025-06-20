@@ -14,6 +14,35 @@ export default NextAuth({
   session: {
     strategy: 'database',
   },
+  cookies: {
+    pkceCodeVerifier: {
+      name: "next-auth.pkce.code_verifier",
+      options: {
+        httpOnly: true,
+        sameSite: "none",
+        path: "/",
+        secure: true,
+      },
+    },
+    state: {
+      name: "next-auth.state",
+      options: {
+        httpOnly: true,
+        sameSite: "none", 
+        path: "/",
+        secure: true,
+      },
+    },
+    nonce: {
+      name: "next-auth.nonce",
+      options: {
+        httpOnly: true,
+        sameSite: "none",
+        path: "/", 
+        secure: true,
+      },
+    },
+  },
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       console.log('SignIn callback:', { user, account, profile });
